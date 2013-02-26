@@ -5,8 +5,7 @@ board = Board.new
 players = [Player.new('Player 1'), Player.new('Player 2')]
 puts "Welcome to a game of Tic Tac Toe!"
 
-until board.winner?
- 
+until board.over?
   players.each do |player|
     puts "\n\n#{board.display}\n\n\n"
     puts "#{player.name} it's your turn. Choose a spot by typing in the number."

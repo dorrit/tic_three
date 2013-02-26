@@ -26,7 +26,7 @@ attr_reader :spaces
     @spaces[player_choice] = mark
   end
 
-  def winner?
+  def over?
     @spaces['1'] == @spaces['2'] && @spaces['2'] == @spaces['3'] ||\
     @spaces['4'] == @spaces['5'] && @spaces['5'] == @spaces['6'] ||\
     @spaces['7'] == @spaces['8'] && @spaces['8'] == @spaces['9'] ||\

@@ -19,10 +19,10 @@ describe Board do
     board.space_marked?('1').should be true
   end
 
-  context '#winner?' do
-    it 'is false before there is a winner' do
+  context '#over?' do
+    it 'is false before the game over' do
       board = Board.new
-      board.winner? should be_false
+      board.over?.should be_false
     end
 
     it 'ends the game when there is a winner' do
@@ -30,7 +30,7 @@ describe Board do
       board.change_mark('1', 'Player 1')
       board.change_mark('2', 'Player 1')
       board.change_mark('3', 'Player 1')
-      board.winner?.should be true
+      board.over?.should be true
     end
   end
 end
